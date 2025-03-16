@@ -21,8 +21,8 @@ A simple user management system implemented in Python using object-oriented prog
 
 OUTPUT:
 
-User  ID: 25970589, Name: Rinat Kubanychbekov, Email: rinat.kubanychbekov@gmail.com, Birthday: 2005-03-21
-Age: 19
+User  ID: 25970589, Name: Temir Saidulaev, Email: temir.saidulaev@gmail.com, Birthday: 2004-09-04
+Age: 20
 Number of users: 1
 
 Process finished with exit code 0
