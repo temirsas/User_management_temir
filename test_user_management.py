@@ -9,14 +9,14 @@ class TestUserManagementSystem(unittest.TestCase):
 
     def setUp(self):
         self.user_id = UserUtil.generate_user_id()
-        self.user = User(self.user_id, "Temir", "Saidulaev", datetime(2005, 3, 21))
+        self.user = User(self.user_id, "Temir", "Saidulaev", datetime(2004, 9, 4))
         self.user.email = UserUtil.generate_email("Temir", "Saidulaev", "gmail.com")
         self.user.password = UserUtil.generate_password()
 
     def test_user_creation(self):
         self.assertEqual(self.user.name, "Temir")
         self.assertEqual(self.user.surname, "Saidulaev")
-        self.assertEqual(self.user.get_age(), datetime.now().year - 2005)
+        self.assertEqual(self.user.get_age(), datetime.now().year - 2004)
 
     def test_user_service(self):
         UserService.add_user(self.user)
@@ -31,7 +31,7 @@ class TestUserManagementSystem(unittest.TestCase):
 
     def test_user_update(self):
         UserService.add_user(self.user)
-        updated_user = User(self.user_id, "Temir", "Saidulaev", datetime(2005, 3, 21))
+        updated_user = User(self.user_id, "Temir", "Saidulaev", datetime(2004, 9, 4))
         UserService.update_user(self.user_id, updated_user)
         self.assertEqual(UserService.find_user(self.user_id).name, "Temir")
 
